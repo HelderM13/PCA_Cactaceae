@@ -2,7 +2,7 @@
 
 This project was developed as part of the "Análise de Sequencias Biológicas" (Biological Sequence Analysis) course at the Escola Superior de Tecnologia do Barreiro, Instituto Politécnico de Setúbal.
 
-The aim of this project is to explore the potential of genome-wide RAD (Restriction-site Associated DNA) sequences for resolving rapid radiations, focusing on the Cactaceae family. The project is based on the article titled "The potential of genome-wide RAD sequences for resolving rapid radiations: a case study in Cactaceae" (link: Article Link).
+The aim of this project is to explore the potential of genome-wide RAD (Restriction-site Associated DNA) sequences for resolving rapid radiations, focusing on the Cactaceae family. The project is based on the article titled "The potential of genome-wide RAD sequences for resolving rapid radiations: a case study in Cactaceae" (link: [Article Link](https://www.sciencedirect.com/science/article/pii/S1055790320301688)).
 
 Scripts
 The repository contains various support scripts for data processing and analysis. Here is a description of some key scripts and how to use them:

@@ -1,30 +1,30 @@
 #!/bin/bash
 
-# Função para percorrer recursivamente as pastas em busca de arquivos .sra
+# Function to recursively traverse folders in search of .sra files
 convert_sra_to_fastq() {
     local dir=$1
 
-    # Loop através dos arquivos e pastas no diretório atual
+    # Loop through files and folders in the current directory
     for entry in "$dir"/*; do
         if [[ -f "$entry" && "$entry" == *.sra ]]; then
-            # Obter o nome do arquivo sem a extensão .sra
+            # Get the file name without the .sra extension
             filename=$(basename "$entry" .sra)
 
-            # Executar o comando fastq-dump para converter o arquivo SRA em FASTQ
+            # Execute the fastq-dump command to convert the SRA file to FASTQ
             fastq-dump -I "$entry" -O "$fastq_directory"
         elif [[ -d "$entry" ]]; then
-            # Se for um diretório, chamar a função recursivamente para processar o diretório
+            # If it's a directory, call the function recursively to process the directory
             convert_sra_to_fastq "$entry"
         fi
     done
 }
 
-# Diretório raiz que contém as pastas com os arquivos SRA
+# Root directory containing folders with SRA files
 root_directory="/home/donmoretti/Desktop/ASB"
 
-# Diretório para salvar os arquivos FASTQ convertidos
+# Directory to save the converted FASTQ files
 fastq_directory="/home/donmoretti/Desktop/fastq"
 mkdir -p "$fastq_directory"
 
-# Chamada da função para converter os arquivos .sra em todas as pastas
+# Call the function to convert .sra files in all folders
 convert_sra_to_fastq "$root_directory" 

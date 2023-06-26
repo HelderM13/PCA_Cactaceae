@@ -8,4 +8,4 @@ def contar_snps(arquivo_vcf):
 
 file_name_vcf = '/home/your/path/file.vcf'
 num_snps = contar_snps(file_name_vcf)
-print(f'The file {file_name_vcf} have {num_snps} SNPs.')
+print(f'The file {file_name_vcf} has {num_snps} SNPs.')

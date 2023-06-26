@@ -1,8 +1,8 @@
 #!/bin/bash
 
-input_folder="$1"  # Pasta de entrada fornecida como argumento
-output_folder=$2  # Substitua pelo caminho da pasta de destino
-desired_reads=$3  # Altere esse valor conforme necessário
+input_folder="$1"  
+output_folder=$2  
+desired_reads=$3  
 
 for file in "$input_folder"/*.fastq; do
     base_name=$(basename "$file" .fastq)

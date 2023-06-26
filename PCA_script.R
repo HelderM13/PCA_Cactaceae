@@ -8,19 +8,19 @@ library(vcfR)
 
 
 
-geno <- LEA::read.geno("C:/Users/helda/OneDrive/Ambiente de Trabalho/cactaceae_32_outfiles/cactaceae_32.geno")
+geno <- LEA::read.geno("/home/path/to/your/geno.geno")
 
 df_geno = as.data.frame(geno) 
 
 v1_classes = factor(df_geno$V1)
 genoPCAmethods = pca(df_geno, scale = "vector", center = TRUE, nPcs = 2, method = "svd")
 
-vcf_file <- ("C:/Users/helda/OneDrive/Ambiente de Trabalho/cactaceae_32_outfiles/cactaceae_32CenterSNP.vcf")
+vcf_file <- ("/home/path/to/your/vcf.vcf")
 vcf <- read.vcfR(vcf_file)
 populations <- vcf@gt
 df_pop = as.data.frame(populations)
 pop_classes = factor(df_pop$SRR11423817_cut) 
-pop_file <- read.table("C:/Users/helda/OneDrive/Ambiente de Trabalho/cactaceae_32_outfiles/popfile.txt", header = TRUE)
+pop_file <- read.table("/home/path/to/your/popfile.txt", header = TRUE)
 
 
 slplot(genoPCAmethods,

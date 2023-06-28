@@ -1,0 +1,3 @@
+pop.number Pop Ind plot
+1	A1 14 1
+2	A2 18 2
